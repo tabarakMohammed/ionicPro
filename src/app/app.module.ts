@@ -3,38 +3,74 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
+
+
+import { MapPage } from '../pages/map/map';
+import { AddPage } from '../pages/add/add';
+import { EditPage } from '../pages/edit/edit';
+import { LoginPage } from '../pages/login/login';
+import { ErorrPage } from '../pages/erorr/erorr';
+
+
+
+
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { PassProvider } from '../providers/pass/pass';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
+
+
+
+var config = {
+  apiKey: "AIzaSyDdgGpdd1XM0NfyPjtX9Fdj5VGB2SZ3ayQ",
+  authDomain: "angularfairbase.firebaseapp.com",
+  databaseURL: "https://angularfairbase.firebaseio.com",
+  projectId: "angularfairbase",
+  storageBucket: "angularfairbase.appspot.com",
+  messagingSenderId: "947652385860"
+};
+
 
 @NgModule({
+  
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage
+    MapPage,
+    AddPage,
+    EditPage,
+    TabsPage,
+    LoginPage,
+    ErorrPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(config),
+    
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage
+    MapPage,
+    AddPage,
+    EditPage,
+    TabsPage,
+    LoginPage,
+    ErorrPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    PassProvider,
+    AngularFireAuth,
+    AngularFireDatabase
   ]
 })
 export class AppModule {}

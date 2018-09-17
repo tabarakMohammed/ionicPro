@@ -25,6 +25,7 @@ $app-direction: ltr;
 
 
 
+
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -38,7 +39,9 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  bb:         #4A86E8,
+    w:        white
 );
 
 
@@ -48,18 +51,40 @@ $colors: (
 
 
 
-
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-
-
+$tabs-md-tab-font-size:	20px;
 
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
 
+
+// Tabs
+// -------------------------------
+
+.tabbar  a[aria-selected=false] {
+  border: 2px color($colors, bb) solid;
+  //border-radius: 30px !important;
+}
+.tabbar  a[aria-selected=true] {
+  border: 2px color($colors, bb) solid;
+  background-color: #ededed !important;
+  // font-weight: 550;
+ // border-radius: 30px !important;
+}
+
+ 
+
+
+.tab-button-text {
+  color: #4A86E8;
+  font-family: "Open Sans";
+  font-variant: normal;
+  font-style: normal;
+  }
 
 
 
