@@ -10,6 +10,8 @@ import { AddPage } from '../pages/add/add';
 import { EditPage } from '../pages/edit/edit';
 import { LoginPage } from '../pages/login/login';
 import { ErorrPage } from '../pages/erorr/erorr';
+import { AboutusPage } from '../pages/aboutus/aboutus';
+
 
 
 
@@ -45,7 +47,8 @@ var config = {
     EditPage,
     TabsPage,
     LoginPage,
-    ErorrPage
+    ErorrPage,
+    AboutusPage
   ],
   imports: [
     BrowserModule,
@@ -62,7 +65,8 @@ var config = {
     EditPage,
     TabsPage,
     LoginPage,
-    ErorrPage
+    ErorrPage,
+    AboutusPage
   ],
   providers: [
     StatusBar,
