@@ -29,12 +29,12 @@ import { AngularFireAuth } from 'angularfire2/auth';
 
 
 var config = {
-  apiKey: "AIzaSyDdgGpdd1XM0NfyPjtX9Fdj5VGB2SZ3ayQ",
-  authDomain: "angularfairbase.firebaseapp.com",
-  databaseURL: "https://angularfairbase.firebaseio.com",
-  projectId: "angularfairbase",
-  storageBucket: "angularfairbase.appspot.com",
-  messagingSenderId: "947652385860"
+  apiKey: "key",
+  authDomain: "authformfire",
+  databaseURL: "url",
+  projectId: "sds",
+  storageBucket: "asa",
+  messagingSenderId: "dfd"
 };
 
 
